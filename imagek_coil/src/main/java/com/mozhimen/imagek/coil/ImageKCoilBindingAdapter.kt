@@ -13,55 +13,55 @@ import com.mozhimen.basick.utilk.android.util.dp2px
  */
 object ImageKCoilBindingAdapter {
     @JvmStatic
-    @BindingAdapter(value = ["loadImageWhen", "loadImageWhen_statusTrue", "loadImageWhen_statusFalse"], requireAll = true)
-    fun loadImageWhen(imageView: ImageView, loadImageWhen: Boolean, loadImageWhen_statusTrue: Any, loadImageWhen_statusFalse: Any) {
-        if (loadImageWhen) {
-            ImageKCoil.loadImageCoil(imageView, loadImageWhen_statusTrue)
+    @BindingAdapter(value = ["loadImageWhenCoil", "loadImageWhenCoil_statusTrue", "loadImageWhenCoil_statusFalse"], requireAll = true)
+    fun loadImageWhenCoil(imageView: ImageView, loadImageWhenCoil: Boolean, loadImageWhenCoil_statusTrue: Any, loadImageWhenCoil_statusFalse: Any) {
+        if (loadImageWhenCoil) {
+            ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil_statusTrue)
         } else {
-            ImageKCoil.loadImageCoil(imageView, loadImageWhen_statusFalse)
+            ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil_statusFalse)
         }
     }
 
     @JvmStatic
-    @BindingAdapter(value = ["loadImageWhen2", "loadImageWhen2_condition2", "loadImageWhen2_status1", "loadImageWhen2_status2", "loadImageWhen2_status3", "loadImageWhen2_status4"], requireAll = true)
-    fun loadImageWhen2(
+    @BindingAdapter(value = ["loadImageWhenCoil2", "loadImageWhenCoil2_condition2", "loadImageWhenCoil2_status1", "loadImageWhenCoil2_status2", "loadImageWhenCoil2_status3", "loadImageWhenCoil2_status4"], requireAll = true)
+    fun loadImageWhenCoil2(
         imageView: ImageView,
-        loadImageWhen2: Boolean,
-        loadImageWhen2_condition2: Boolean,
-        loadImageWhen2_status1: Any,
-        loadImageWhen2_status2: Any,
-        loadImageWhen2_status3: Any,
-        loadImageWhen2_status4: Any
+        loadImageWhenCoil2: Boolean,
+        loadImageWhenCoil2_condition2: Boolean,
+        loadImageWhenCoil2_status1: Any,
+        loadImageWhenCoil2_status2: Any,
+        loadImageWhenCoil2_status3: Any,
+        loadImageWhenCoil2_status4: Any
     ) {
         when {
-            loadImageWhen2 && loadImageWhen2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhen2_status1)
-            loadImageWhen2 && !loadImageWhen2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhen2_status2)
-            !loadImageWhen2 && loadImageWhen2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhen2_status3)
-            !loadImageWhen2 && !loadImageWhen2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhen2_status4)
+            loadImageWhenCoil2 && loadImageWhenCoil2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil2_status1)
+            loadImageWhenCoil2 && !loadImageWhenCoil2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil2_status2)
+            !loadImageWhenCoil2 && loadImageWhenCoil2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil2_status3)
+            !loadImageWhenCoil2 && !loadImageWhenCoil2_condition2 -> ImageKCoil.loadImageCoil(imageView, loadImageWhenCoil2_status4)
         }
     }
 
     @JvmStatic
-    @BindingAdapter("loadImage")
-    fun loadImage(imageView: ImageView, res: Any) {
-        ImageKCoil.loadImageCoil(imageView, res)
+    @BindingAdapter("loadImageCoil")
+    fun loadImageCoil(imageView: ImageView, loadImageCoil: Any) {
+        ImageKCoil.loadImageCoil(imageView, loadImageCoil)
     }
 
     @JvmStatic
-    @BindingAdapter(value = ["loadImageBlur", "placeholder"], requireAll = true)
-    fun loadImageBlur(imageView: ImageView, res: Any, placeholder: Int) {
-        ImageKCoil.loadImageBlurCoil(imageView, res, placeholder)
+    @BindingAdapter(value = ["loadImageBlurCoil", "placeholder"], requireAll = true)
+    fun loadImageBlurCoil(imageView: ImageView, loadImageBlurCoil: Any, placeholder: Int) {
+        ImageKCoil.loadImageBlurCoil(imageView, loadImageBlurCoil, placeholder)
     }
 
     @JvmStatic
-    @BindingAdapter(value = ["loadImageRoundedCorner", "roundedCornerRadius"], requireAll = true)
-    fun loadImageRoundedCorner(imageView: ImageView, res: Any, roundedCornerRadius: Int) {
-        ImageKCoil.loadImageRoundedCornerCoil(imageView, res, roundedCornerRadius.dp2px())
+    @BindingAdapter(value = ["loadImageRoundedCornerCoil", "roundedCornerRadius"], requireAll = true)
+    fun loadImageRoundedCornerCoil(imageView: ImageView, loadImageRoundedCornerCoil: Any, roundedCornerRadius: Int) {
+        ImageKCoil.loadImageRoundedCornerCoil(imageView, loadImageRoundedCornerCoil, roundedCornerRadius.dp2px())
     }
 
     @JvmStatic
-    @BindingAdapter(value = ["loadImageRoundedCorner", "roundedCornerRadius"], requireAll = true)
-    fun loadImageRoundedCorner(imageView: ImageView, res: Any, roundedCornerRadius: Float) {
-        ImageKCoil.loadImageRoundedCornerCoil(imageView, res, roundedCornerRadius.dp2px())
+    @BindingAdapter(value = ["loadImageRoundedCornerCoil", "roundedCornerRadius"], requireAll = true)
+    fun loadImageRoundedCornerCoil(imageView: ImageView, loadImageRoundedCornerCoil: Any, roundedCornerRadius: Float) {
+        ImageKCoil.loadImageRoundedCornerCoil(imageView, loadImageRoundedCornerCoil, roundedCornerRadius.dp2px())
     }
 }
