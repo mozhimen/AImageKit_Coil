@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    api project(':imagek_coil')
+//    api project(project.path.replace(project.name, '') +':imagek_coil')
     api "io.coil-kt:coil-compose:2.5.0"
 
     testImplementation 'junit:junit:4.13.2'

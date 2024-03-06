@@ -21,9 +21,10 @@ dependencyResolutionManagement {
 rootProject.name = "AImageKit_Coil"
 include ':app'
 include ':imagek_coil'
+include ':imagek_coil_compose'
 //SwiftKit
 include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("C:\\Users\\${System.getenv().get("USERNAME")}\\Documents\\GitHub\\SwiftKit")
+project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
-include ':SwiftKit:uicorek'
-include ':imagek_coil_compose'
+include ':SwiftKit:xmlk'
+
