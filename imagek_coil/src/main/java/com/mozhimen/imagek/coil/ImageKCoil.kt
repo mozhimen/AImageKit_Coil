@@ -74,7 +74,6 @@ fun ImageView.loadImageCropCoil(
     ImageKCoil.loadImageCropCoil(this, res, cropType)
 }
 
-@AManifestKRequire(CPermission.INTERNET)
 object ImageKCoil {
 
     @JvmStatic
